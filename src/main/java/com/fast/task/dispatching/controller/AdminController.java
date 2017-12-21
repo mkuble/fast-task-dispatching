@@ -1,5 +1,9 @@
 package com.fast.task.dispatching.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.fast.task.dispatching.service.AdminService;
+
 /**
  * 管理员接口对应
  * 
@@ -8,4 +12,7 @@ package com.fast.task.dispatching.controller;
  */
 public class AdminController {
 
+	@Autowired
+	AdminService adminService;
+	
 }
