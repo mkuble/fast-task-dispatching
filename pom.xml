@@ -5,6 +5,7 @@
 	<groupId>fast-task-dispatching</groupId>
 	<artifactId>fast-task-dispatching</artifactId>
 	<packaging>jar</packaging>
+	<version>1.0.0</version>
 
 	<name>fast-task-dispatching</name>
 	<url>http://maven.apache.org</url>
@@ -19,15 +20,35 @@
 		<version>0.0.1</version>
 	</parent>
 
+	<build>
+		<resources>
+			<!-- 先指定 src/main/resources下所有文件及文件夹为资源文件 -->
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*</include>
+				</includes>
+			</resource>
+			<!--<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>auto-config.properties</include>
+					<include>jdbc.properties</include>
+				</includes>
+				<filtering>true</filtering>
+			</resource> -->
+		</resources>
+	</build>
+
 	<dependencies>
-		
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.fast.framework</groupId>
 			<artifactId>fast-framework-commons</artifactId>
@@ -39,8 +60,7 @@
 			<artifactId>fast-framework-data</artifactId>
 			<version>0.0.1</version>
 		</dependency>
-		
+
 	</dependencies>
-	
-	<version>1.0.0</version>
+
 </project>
