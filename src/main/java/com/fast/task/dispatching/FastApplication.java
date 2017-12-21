@@ -6,6 +6,11 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import com.fast.framework.data.jpa.BaseRepositoryFactoryBean;
 
+/**
+ * app启动
+ * @author lion.chen
+ *
+ */
 @SpringBootApplication
 @EnableJpaRepositories(basePackages = { "com.fast.task.dispatching" }, repositoryFactoryBeanClass = BaseRepositoryFactoryBean.class)	//指定自定义的工厂类
 public class FastApplication {
